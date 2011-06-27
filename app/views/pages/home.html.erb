@@ -1,0 +1,64 @@
+<h1>Hausaufgabe 2 und 3</h1>
+Um einen neuen Grafen hinzuzufügen - auf Grafen klicken. <br />
+Um eine Rute hinzuzufügen auf Rute klicken und eine neue hinzufügen - diese wird dann ausgerechnet.
+<br /><br /><br />
+
+<h1>Listing graphs</h1>
+
+<table>
+  <tr>
+    <th>Start</th>
+    <th>End</th>
+    <th>Length</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @graphs.each do |graph| %>
+  <tr>
+    <td><%= graph.start %></td>
+    <td><%= graph.end %></td>
+    <td><%= graph.length %></td>
+    <td><%= link_to 'Show', graph %></td>
+    <td><%= link_to 'Edit', edit_graph_path(graph) %></td>
+    <td><%= link_to 'Destroy', graph, :confirm => 'Are you sure?', :method => :delete %></td>
+    
+  </tr>
+<% end %>
+</table>
+<%= link_to 'New Graph', new_graph_path %>
+
+
+<h1>Listing rutes</h1>
+
+<table>
+  <tr>
+    <th>Rute</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @rutes.each do |rute| %>
+  <tr>
+    <td><%= rute.rute %></td>
+    <td><%= link_to 'Show', rute %></td>
+    <td><%= link_to 'Edit', edit_rute_path(rute) %></td>
+    <td><%= link_to 'Destroy', rute, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<%= link_to 'New Rute', new_rute_path %>
+
+
+
+
+Strecke der LETZTEN Rute : <b> <%= f %> </b>
+
+	
+
+

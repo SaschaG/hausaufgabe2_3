@@ -1,0 +1,26 @@
+<h1>Listing rutes</h1>
+
+<table>
+  <tr>
+    <th>Rute</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @rutes.each do |rute| %>
+  <tr>
+    <td><%= rute.rute %></td>
+    <td><%= link_to 'Show', rute %></td>
+    <td><%= link_to 'Edit', edit_rute_path(rute) %></td>
+    <td><%= link_to 'Destroy', rute, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Rute', new_rute_path %>
+<br />
+<br />
+Strecke der LETZTEN Rute : <b> <%= f %> </b>
